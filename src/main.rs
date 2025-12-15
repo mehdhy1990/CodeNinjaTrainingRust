@@ -1,8 +1,8 @@
-mod repeat_str;
+mod square_digits;
+
 
 fn main() {
-    let result =repeat_str::repeat_str("Hello", 4);
+    let result = square_digits::square_digits(91199);
     println!("{}", result);
 }
-
 
