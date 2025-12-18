@@ -1,8 +1,7 @@
-mod square_digits;
-
+mod get_count;
 
 fn main() {
-    let result = square_digits::square_digits(91199);
+    let result = get_count::get_count("hello world");
     println!("{}", result);
 }
 
