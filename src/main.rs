@@ -1,12 +1,11 @@
-
+mod Rank_up_files;
 
 fn main() {
-    let result = create_phone_number(&[1,2,3,4,5,6,7,8,9,0]);
-    println!("{}", result);
+    let number = 'a';
+    println!("{}", number);
 }
 
-fn create_phone_number(numbers: &[u8]) -> String {
-  let strings=  numbers.iter().map(|x| x.to_string()).collect::<String>();
-    format!("({}) {}-{}",&strings[..3],&strings[3..6],&strings[6..])
 
+fn find_missing_letter(chars: &[char]) -> char {
+todo!()
 }
