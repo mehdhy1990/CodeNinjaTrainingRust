@@ -1,10 +1,8 @@
-use std::arch::x86_64::_fxrstor64;
-use std::collections::HashMap;
 
 mod rank_up_files;
 
 fn main() {
-    let result = rank_up_files::solution(11);
+    let result = rank_up_files::spin_words("Hey fellow warriors");
 
     println!("{} this is the result", result)
 }

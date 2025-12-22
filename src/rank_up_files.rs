@@ -80,3 +80,24 @@ pub fn solution(num: i32) -> i32 {
     //best practice
     (1..num).filter(|x| x % 3 == 0 || x % 5 == 0 ).sum()
 }
+pub fn spin_words(words: &str) -> String {
+    let result = words.split_whitespace().map(|x| {
+        if x.len() >= 5 {
+            // Correct way to reverse a string
+            x.chars().rev().collect::<String>()
+        } else {
+            // You must return the original word if it's short
+            x.to_string()
+        }
+    }).collect::<Vec<_>>();
+    result.join(" ")
+
+
+    //this is the best practice
+    //-------------------------------
+    // words.split_ascii_whitespace().map(|word| match word.len() >= 5 {
+    //     true => word.chars().rev().collect(),
+    //     false => word.to_string()
+    // }).collect::<Vec<String>>().join(" ")
+
+}
