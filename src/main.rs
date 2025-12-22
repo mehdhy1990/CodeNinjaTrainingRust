@@ -1,12 +1,18 @@
-
+use std::arch::x86_64::_fxrstor64;
+use std::collections::HashMap;
 
 mod rank_up_files;
 
-
 fn main() {
-    let number = vec!['a', 'b', 'd', 'e', 'f', 'g'];
-    let result = rank_up_files::find_missing_letter(&number);
+    let result = rank_up_files::solution(11);
 
-    println!("{} this is the result", result);
+    println!("{} this is the result", result)
 }
 
+// fn find_uniq(arr: &[f64]) -> f64 {
+//     let mut counts = HashMap::new();
+//     for num in arr {
+//         counts.entry(num).or_insert(0.0) += 1;
+//     }
+//     todo!()
+// }

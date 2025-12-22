@@ -61,3 +61,22 @@ pub fn find_missing_letter(chars: &[char]) -> char {
     //     .unwrap().0 + 1) as char           //Add 1 to previous character, to get the correct character.
 
 }
+pub fn solution(num: i32) -> i32 {
+    let mut count =0;
+    for i in 1..num {
+        if( i % 3 == 0  && i % 5 == 0) {
+            count += i;
+            continue
+        }
+        else  if( i % 3 == 0  ) {
+            count += i;
+        }
+        else if ( i % 5 == 0  ) {
+            count += i;
+        }
+
+    }
+    return count;
+    //best practice
+    (1..num).filter(|x| x % 3 == 0 || x % 5 == 0 ).sum()
+}
